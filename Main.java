@@ -1,3 +1,5 @@
+import java.util.*; 
+
 class Main {
 
 	public static void main(String[] args) {
@@ -9,12 +11,23 @@ class Main {
         //test dimension
         //Client.testDimension(longeur, largeur);
 
+        // Liste des clients
+        List<Client> Clients = new ArrayList<Client>();
+
+        // Liste des fournisseurs
+        List<Fournisseur> Fournisseurs = new ArrayList<Fournisseur>();
+
         try {
-            XmlReaderPerso.Reader();
+            Clients = XmlReaderClient.Reader();
         } catch(Exception e) {
             System.out.println("fichier introuvable");
         }
-        
+
+        try {
+            Fournisseurs = XmlReaderFournisseur.Reader();
+        } catch(Exception e) {
+            System.out.println("fichier introuvable");
+        }
 
 	}
 
