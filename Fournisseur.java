@@ -1,11 +1,13 @@
+import java.util.List;
+
 public class Fournisseur {
 
     //Arguments
-    String id;
-    Panneau panneau;
+    int id;
+    List<Panneau> panneau;
 
     //Constructeur
-    Fournisseur(String id, Panneau panneau){
+    Fournisseur(int id, List<Panneau> panneau){
         this.id = id;
         this.panneau = panneau;
     }
